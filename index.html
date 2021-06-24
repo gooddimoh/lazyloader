@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<img class="lozad" data-src="image.png">
+
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
+<script>
+    import lozad from 'lozad'
+
+    var lozad = require('lozad');
+
+    const el = document.querySelector('img');
+    const observer = lozad(el); // passing a `NodeList` (e.g. `document.querySelectorAll()`) is also valid
+    observer.observe();
+
+    const observer = lozad('.lozad', {
+        rootMargin: '10px 0px', // syntax similar to that of CSS Margin
+        threshold: 0.1, // ratio of element convergence
+        enableAutoReload: true // it will reload the new image when validating attributes changes
+    });
+    observer.observe();
+
+    lozad('.lozad', {
+        load: function (el) {
+            console.log('loading element');
+
+            // Custom implementation to load an element
+            // e.g. el.src = el.getAttribute('data-src');
+        }
+    });
+
+    lozad('.lozad', {
+        loaded: function (el) {
+            // Custom implementation on a loaded element
+            el.classList.add('loaded');
+        }
+    });
+</script>
+<script>
+    var menuId = $("ul.nav").first().attr("id");
+    var request = $.ajax({
+        url: "imgprocessing.php",
+        method: "POST",
+        data: {id: menuId},
+        dataType: "html"
+    });
+
+    request.done(function (msg) {
+        $("#log").html(msg);
+    });
+
+    request.fail(function (jqXHR, textStatus) {
+        alert("Request failed: " + textStatus);
+    });
+</script>
+<style type="text/css"></style>
+</body>
+</html>

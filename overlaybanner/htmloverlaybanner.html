@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+<div class="card">
+    <div class="card-item img">
+        <img src="" alt="">
+    </div>
+    <div class="card-item card-info">
+        <h1>Get Disk Drill PRO BR </h1>
+        <p>Unlimited data recovery for just
+            <b>$66</b>
+            <span class="no"> $89 </span>
+            <span class="green">
+                Save $22
+            </span>
+            on Disk Drill PRO now!
+        </p>
+
+        <div class="notifi-to-card1">
+            <span class="copy"></span>
+        </div>
+        <div class="notifi-to-card2">
+            <span class="copy"></span>
+        </div>
+        <p>The discount will be gone in: 14h : 24m : 10s </p>
+
+        <input type="text" placeholder="Redeem Coupon Now">
+        <a href="">or Download Disk Drill Basic</a>
+
+    </div>
+    <div class="copy-coupon">
+        <p>Redeem Coupon Now</p>
+    </div>
+    <a href="">or Download Disk Drill Basic</a>
+</div>
+
+<div class="notification">
+    <i>
+        Use coupon code:
+    </i>
+    <p class="coupon-code">
+        DD-25NOW
+    </p>
+    <span class="copy">
+        COPY
+    </span>
+</div>
+<input class="green-button" type="text" placeholder="Redeem Coupon Now">
+<input>Redeem Coupon Now</input>
+<input class="green-button" type="text" placeholder="Redeem Coupon Now">
+<input>Redeem Coupon Now</input>
+
+<a href="">or Download Disk Drill Basic</a>
+<script>
+
+    function copyToClipboard() {
+        var textBox = document.getElementsByClassName("coupon-code");
+        textBox.select();
+        document.execCommand("copy");
+        alert("Coupon Was Copied");
+    }
+
+    copyToClipboard();
+
+</script>
+<style type="text/css">
+    .green-button {
+        padding: 20px;
+        width: 200px;
+    }
+
+    .card {
+        width: 860px;
+        height: 560px;
+    }
+
+    .card-item {
+    }
+
+    .copy {
+    }
+
+
+</style>
+</body>
+</html>
